@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+### Changed
+
+- README: point bundled skill references at the new `skills/openspec/` layout and document the standalone ClawHub slug (`openspec-skill`).
+
 ## 0.1.1
 
 ### Changed

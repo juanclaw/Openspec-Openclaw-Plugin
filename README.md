@@ -71,7 +71,13 @@ Then restart the gateway: `openclaw gateway restart`.
 
 ## Skill
 
-The bundled skill (`src/skill/SKILL.md`) ships under `openclaw-skills:openspec`. It teaches the agent when to invoke OpenSpec, the core workflow, and anti-patterns. Extended patterns live in `src/skill/references/workflow.md`.
+The bundled skill (`skills/openspec/SKILL.md`) ships under `openclaw-skills:openspec`. It teaches the agent when to invoke OpenSpec, the core workflow, and anti-patterns. Extended patterns live in `skills/openspec/references/workflow.md`.
+
+It is also published as a standalone ClawHub skill:
+
+```bash
+openclaw skills install openspec-skill
+```
 
 ## License
 
