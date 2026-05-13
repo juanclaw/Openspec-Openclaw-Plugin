@@ -2,8 +2,8 @@
   "id": "openspec-openclaw-plugin",
   "name": "OpenSpec Openclaw Plugin",
   "description": "OpenSpec (@fission-ai/openspec) integration for spec-driven development inside OpenClaw sessions.",
-  "version": "0.1.0",
-  "skills": ["src/skill"],
+  "version": "0.1.1",
+  "skills": ["./skills"],
   "contracts": {
     "tools": [
       "openspec_init",

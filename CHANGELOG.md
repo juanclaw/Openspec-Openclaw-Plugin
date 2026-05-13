@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+### Changed
+
+- Align skill layout with OpenClaw's standard convention. The manifest now points at a `./skills` container, with each skill in its own subdirectory keyed by skill id (`skills/openspec/SKILL.md`). Fixes runtime "plugin skill name collision" warnings when other plugins use the legacy `src/skill/` layout.
+- `package.json` `files` now ships the whole `skills` directory (and `CHANGELOG.md`).
+
 ## 0.1.0
 
 Initial release.
