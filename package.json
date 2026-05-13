@@ -1,0 +1,61 @@
+{
+  "name": "openspec-openclaw-plugin",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin that integrates OpenSpec (@fission-ai/openspec) for spec-driven development inside OpenClaw sessions.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/skill/SKILL.md",
+    "src/skill/references",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": "2026.5.7",
+      "minGatewayVersion": "2026.5.7",
+      "builtWithOpenClawVersion": "2026.5.7"
+    },
+    "build": {
+      "openclawVersion": "2026.5.7"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "openspec",
+    "spec-driven-development",
+    "sdd",
+    "ai-coding"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "openclaw": ">=2026.5.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.41"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  }
+}

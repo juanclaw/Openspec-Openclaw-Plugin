@@ -1,0 +1,50 @@
+{
+  "id": "openspec-openclaw-plugin",
+  "name": "OpenSpec Openclaw Plugin",
+  "description": "OpenSpec (@fission-ai/openspec) integration for spec-driven development inside OpenClaw sessions.",
+  "version": "0.1.0",
+  "skills": ["src/skill"],
+  "contracts": {
+    "tools": [
+      "openspec_init",
+      "openspec_update",
+      "openspec_list",
+      "openspec_show",
+      "openspec_validate",
+      "openspec_archive",
+      "openspec_status",
+      "openspec_run"
+    ]
+  },
+  "uiHints": {
+    "enabled": { "label": "Enable OpenSpec integration" },
+    "command": { "label": "OpenSpec command", "placeholder": "auto | openspec | /path/to/openspec" },
+    "args": { "label": "Extra default arguments", "advanced": true },
+    "allowedRoots": { "label": "Allowed project roots" },
+    "readOnly": { "label": "Read-only mode (block init/archive/update)" },
+    "timeoutMs": { "label": "Per-command timeout (ms)", "advanced": true },
+    "env": { "label": "Extra environment variables", "advanced": true }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": { "type": "boolean" },
+      "command": { "type": "string" },
+      "args": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "env": {
+        "type": "object",
+        "additionalProperties": { "type": "string" }
+      },
+      "readOnly": { "type": "boolean" },
+      "allowedRoots": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "timeoutMs": { "type": "integer", "minimum": 1000 }
+    }
+  }
+}
